@@ -1,0 +1,25 @@
+Let P be a string of n-character.
+P[i...j] is a substring of P from index i to index j inclusive.
+Note: Technically, a string is a substring of itself (taking i = 0 and j = n - 1).
+TYPES OF SUBSTRING
+1. PROPER substring. P[i...j] where either i > 0 or j < n - 1. This means it's a type of substring
+whose either its first character isn't the string first character or whose last character isn't the
+string last character.
+
+2. PREFIX substring. P[0...j] 0 <= j <= n - 1. It shares the same starting character with the string.
+
+3. SUFFIX substring. P[i...n - 1] 0 <= i <= n - 1. Shares the same last character with the string.
+
+4. NULL String: p[i..j]. if i > j, we have a null string.
+
+Given that P = "CGTAAACTGCTTTAATCAAACGC"
+Proper string = "TTAATC" --------Neither first nor last
+Prefix string = "CGTAAA" --------First
+Suffix string = "AAACGC" --------Last
+
+PATTERN-MATCHING ALGORITHMS
+In the classic pattern-matching problem, we are given a text string of length n and a pattern
+string of length m ≤ n, and must determine whether the pattern is a substring of the text. If so,
+we may want to find the lowest index within the text at which the pattern begins.
+
+1. BRUTE FORCE APPROACH
